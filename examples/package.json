@@ -1,0 +1,25 @@
+{
+  "name": "yugenox-mcp-examples",
+  "private": true,
+  "type": "module",
+  "description": "Minimal agent-framework examples for yugenox/youtube-scraper and yugenox/instagram-scraper on Apify via pinned MCP URLs.",
+  "scripts": {
+    "vercel-ai": "node vercel-ai-sdk/youtube-agent.ts",
+    "claude-agent": "node claude-agent-sdk/instagram-agent.ts",
+    "check": "tsc --noEmit -p tsconfig.json && sh ./check-python.sh"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "dependencies": {
+    "@ai-sdk/mcp": "^2.0.60",
+    "@ai-sdk/openai": "^4.0.78",
+    "@anthropic-ai/claude-agent-sdk": "^0.3.283",
+    "ai": "^7.0.116",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "typescript": "^5.9.3"
+  }
+}

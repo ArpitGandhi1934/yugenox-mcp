@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ArpitGandhi1934/yugenox-instagram-scraper",
+  "title": "Instagram Scraper: Reels to Text, Posts, Comments, No Login",
+  "description": "Public Instagram reels, posts, profiles and comments, plus reel-to-text transcripts. No login.",
+  "repository": {
+    "url": "https://github.com/ArpitGandhi1934/yugenox-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/yugenox/instagram-scraper",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-scraper",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. Clients with OAuth sign in to Apify instead. Otherwise your own Apify token as Bearer <token>.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

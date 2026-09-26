@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ArpitGandhi1934/yugenox-youtube-scraper",
+  "title": "YouTube Scraper: Comments, Dislike Estimates, No API Key",
+  "description": "YouTube videos and channels with top comments in the same row, plus dislike estimates. No API key.",
+  "repository": {
+    "url": "https://github.com/ArpitGandhi1934/yugenox-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/yugenox/youtube-scraper",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/youtube-scraper",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. Clients with OAuth sign in to Apify instead. Otherwise your own Apify token as Bearer <token>.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

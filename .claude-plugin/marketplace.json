@@ -1,0 +1,38 @@
+{
+  "name": "yugenox-mcp",
+  "owner": {
+    "name": "Yugenox Corporation"
+  },
+  "metadata": {
+    "description": "Public Instagram and YouTube data for Claude Code through pinned Apify MCP servers. Sign in with your own Apify account; pay per result.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "yugenox-social-data",
+      "source": "./plugins/yugenox-social-data",
+      "description": "Instagram Reels to text, public creator signals, YouTube videos with top comments and dislike estimates. Two pay-per-result Apify Actors (yugenox/instagram-scraper, yugenox/youtube-scraper) behind one OAuth MCP server, plus two skills that state the cost before every run.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Yugenox Corporation",
+        "url": "https://apify.com/yugenox"
+      },
+      "homepage": "https://github.com/ArpitGandhi1934/yugenox-mcp",
+      "repository": "https://github.com/ArpitGandhi1934/yugenox-mcp",
+      "license": "MIT",
+      "keywords": [
+        "instagram",
+        "youtube",
+        "reels-transcripts",
+        "youtube-comments",
+        "youtube-dislikes",
+        "influencer-research",
+        "competitor-analysis",
+        "no-api-key",
+        "apify",
+        "mcp"
+      ],
+      "category": "data"
+    }
+  ]
+}

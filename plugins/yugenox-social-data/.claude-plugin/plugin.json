@@ -1,0 +1,13 @@
+{
+  "name": "yugenox-social-data",
+  "version": "1.0.0",
+  "description": "Instagram Reels to text, public creator signals, YouTube videos with top comments and dislike estimates, via two pay-per-result Apify Actors behind one OAuth MCP server.",
+  "author": {
+    "name": "Yugenox Corporation",
+    "url": "https://apify.com/yugenox"
+  },
+  "homepage": "https://github.com/ArpitGandhi1934/yugenox-mcp",
+  "repository": "https://github.com/ArpitGandhi1934/yugenox-mcp",
+  "license": "MIT",
+  "keywords": ["instagram", "youtube", "reels-transcripts", "youtube-comments", "youtube-dislikes", "apify", "mcp"]
+}

@@ -1,0 +1,10 @@
+# Python examples. Install only what you need:
+langchain-apify>=0.1.4        # langgraph/
+langgraph>=1.0
+langchain>=0.3
+langchain-openai>=0.3
+crewai[tools]>=1.0            # crewai/ (ApifyActorsTool also needs langchain-apify)
+llama-index-core>=0.14        # llamaindex/
+llama-index-tools-mcp>=0.4
+llama-index-llms-openai>=0.5
+openai-agents>=0.20           # openai-agents/

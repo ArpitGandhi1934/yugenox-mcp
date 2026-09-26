@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "yugenox-social": {
+      "type": "http",
+      "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-scraper,yugenox/youtube-scraper"
+    }
+  }
+}
