@@ -70,7 +70,18 @@ If OIDC ever fails: `mcp-publisher login github` (device code, Arpit's browser) 
 
 ## Registry entries (live)
 
-REGISTRY_STATUS_PLACEHOLDER
+Published 2026-09-26 13:07 UTC by Actions run 36244107188 (tag v1.0.0), OIDC login, status `active`:
+
+| Name | Version | Entry |
+|---|---|---|
+| io.github.ArpitGandhi1934/yugenox-instagram-scraper | 1.0.0 | https://registry.modelcontextprotocol.io/v0/servers/io.github.ArpitGandhi1934%2Fyugenox-instagram-scraper/versions/latest |
+| io.github.ArpitGandhi1934/yugenox-youtube-scraper | 1.0.0 | https://registry.modelcontextprotocol.io/v0/servers/io.github.ArpitGandhi1934%2Fyugenox-youtube-scraper/versions/latest |
+| io.github.ArpitGandhi1934/yugenox-social-data | 1.0.0 | https://registry.modelcontextprotocol.io/v0/servers/io.github.ArpitGandhi1934%2Fyugenox-social-data/versions/latest |
+
+Search: https://registry.modelcontextprotocol.io/v0/servers?search=yugenox (registry search matches the
+server name only, which is why every name contains "yugenox"). Downstream directories that mirror the
+registry (PulseMCP, Glama and others) pick these up on their own schedule.
+
 
 ## Rules / gotchas
 
