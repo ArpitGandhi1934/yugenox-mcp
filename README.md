@@ -46,6 +46,10 @@ each run:
 /plugin install yugenox-social-data@yugenox-mcp
 ```
 
+The plugin folder, [`plugins/yugenox-social-data`](plugins/yugenox-social-data), also follows the
+[Agent Plugins 1.0](https://agent-plugins.org) format (`plugin.json`, `mcp.json`, `skills/`), so
+other clients that load Agent Plugins can install the same server and skills from it.
+
 ### Claude.ai and Claude Desktop
 
 Settings → Connectors → **Add custom connector**. Name it `yugenox-social`, paste the server

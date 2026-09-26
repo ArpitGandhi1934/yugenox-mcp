@@ -38,7 +38,10 @@ No build step. Plain JSON + Markdown, plus small Node (>=20) scripts with zero d
   `node scripts/make-install-links.mjs` from `scripts/servers.mjs`. Never hand-edit.
 - `.claude-plugin/marketplace.json` + `plugins/yugenox-social-data/` — Claude Code plugin
   marketplace (`/plugin marketplace add ArpitGandhi1934/yugenox-mcp`). The plugin ships
-  `.mcp.json` (pinned URL, OAuth, no headers) and two skills.
+  `.mcp.json` (pinned URL, OAuth, no headers) and two skills. The same folder is also a portable
+  Agent Plugin (agent-plugins.org 1.0): `plugin.json` + `mcp.json` (type `streamable-http`), validated
+  against the published schemas. Keep `.mcp.json` and `mcp.json` pointing at the same URL.
+- `glama.json` — Glama ownership claim (maintainer ArpitGandhi1934).
 - `registry/{instagram,youtube,social}/server.json` — MCP Registry entries, namespace
   `io.github.ArpitGandhi1934/*` (must match the GitHub owner for OIDC). Descriptions ≤100 chars.
 - `.github/workflows/publish-mcp-registry.yml` — on tag `v*`: stamps the tag version into
