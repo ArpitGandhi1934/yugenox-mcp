@@ -29,8 +29,8 @@ researcher = Agent(
 
 task = Task(
     description=(
-        "Scrape the 10 newest Reels from https://www.instagram.com/hubermanlab/reels/ with "
-        'run_input {"startUrls": ["https://www.instagram.com/hubermanlab/reels/"], '
+        "Scrape the 10 newest Reels from https://www.instagram.com/nasa/reels/ with "
+        'run_input {"startUrls": ["https://www.instagram.com/nasa/reels/"], '
         '"maxItems": 10, "includeTranscript": true}. Summarise the first sentence of each '
         "transcript and group them into hook types."
     ),

@@ -19,7 +19,7 @@ if (!token) throw new Error('Set APIFY_TOKEN to your own Apify API token.');
 
 for await (const message of query({
   prompt:
-    'Scrape the 10 newest reels from https://www.instagram.com/hubermanlab/reels/ with ' +
+    'Scrape the 10 newest reels from https://www.instagram.com/nasa/reels/ with ' +
     'transcripts (maxItems 10, includeTranscript true). Give me each reel URL, its plays and ' +
     'the first spoken sentence, then group the openings into hook types.',
   options: {

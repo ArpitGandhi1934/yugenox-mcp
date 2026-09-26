@@ -12,8 +12,8 @@ The tool is `yugenox--instagram-scraper` on the `yugenox-social` MCP server. The
 
 ## Example prompts
 
-- "Transcribe the last 20 reels from @hubermanlab and group the opening lines into hook types."
-- "Get every post @glossier published in the last 30 days with likes, comments and plays, as a CSV."
+- "Transcribe the last 20 reels from @nasa and group the opening lines into hook types."
+- "Get every post [a brand handle] published in the last 30 days with likes, comments and plays, as a CSV."
 - "Vet @somecreator: engagement rate over their last 30 posts, paid-partnership posts, and 20 similar accounts that list a contact in their bio."
 
 Out of scope: stories, highlights content, follower or following lists, tagged posts and private accounts (Instagram shows them only to signed-in accounts, so this tool never returns them). Audience demographics, fake-follower analysis and payout-grade view verification are not available either: this is public engagement data only.
@@ -45,6 +45,6 @@ Posts: `url`, `createdAt`, `caption`, `likeCount`, `commentCount`, `video.playCo
 - Hashtags and keywords return Instagram's curated top posts for popular terms, typically about 60. Terms Instagram keeps for signed-in users return nothing and cost nothing. Suggest `expandRelatedKeywords` for more.
 - `likeCount` is null when the creator hides like counts; use comments and plays instead.
 - Reel play counts shown to logged-out visitors can undercount; treat them as public signals, not audited numbers.
-- Reels set to a licensed song have no speech; they are skipped and not charged for transcripts.
+- Reels with no detectable speech (for example, set only to a licensed song) are usually skipped for transcription. Occasionally one comes back with an empty transcript and its minute billed.
 - Free Apify plans get a limited number of results per run (10 on 2026-09-26).
 - Results include public usernames and bios. The user must handle them under GDPR, PIPEDA or CCPA.

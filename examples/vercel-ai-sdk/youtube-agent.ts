@@ -32,7 +32,7 @@ try {
       'yugenox--youtube-scraper and always set maxItems. Dislikes are Return YouTube Dislike ' +
       'estimates (returnyoutubedislike.com).',
     prompt:
-      'Get the 20 latest videos from @mkbhd with views, likes and estimated dislikes. ' +
+      'Get the 20 latest videos from @NASA with views, likes and estimated dislikes. ' +
       'List the ones above 2x the median views and the like-to-dislike ratio of each.',
   });
   console.log(text);

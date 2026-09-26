@@ -176,10 +176,13 @@ You pay Apify per result, from your own account. Prices below are the Store list
   at their Free-tier prices ($0.40 for videos + $4.00 for 2,000 comments).
 - **Instagram:** $0.0019 per row (post, comment, profile, place or keyword). Latest comments,
   Instagram's AI summary and view counts are included. Transcripts add $0.004 per started
-  minute of speech, so a 30-second reel with its transcript is about **$0.0059**. Reels set
-  to a licensed song have no speech and are not charged for a transcript.
+  minute of audio, so a 30-second reel with its transcript is about **$0.0059**. Reels with
+  no detectable speech are usually skipped for transcription.
 - On Instagram, rows removed by your filters, sources that return nothing and private
   accounts cost nothing.
+- On YouTube, every saved row is billed at $0.002, including error rows: an empty or
+  over-filtered search, an unknown channel or playlist, and an unavailable, private or
+  age-restricted video each save one row with an `error` field explaining why.
 
 Good habit for agents: set `maxItems` on every call and say the estimate before running.
 The plugin skills and example prompts do this.
@@ -188,15 +191,15 @@ The plugin skills and example prompts do this.
 
 YouTube:
 
-- "Pull the last 50 videos from @mkbhd and flag the ones above 2x the channel's median views."
+- "Pull the last 50 videos from @NASA and flag the ones above 2x the channel's median views."
 - "Top 30 videos about 'home espresso' uploaded this month, sorted by views, with 10 top comments each. What do viewers complain about?"
 - "Like-to-dislike ratio for these 40 video URLs." (Dislikes are estimates, see below.)
 - "Audit @somecreator before we sponsor them: average views over the last 30 uploads and the sponsor and social links in their descriptions."
 
 Instagram:
 
-- "Transcribe the last 20 reels from @hubermanlab and group the opening lines into hook types."
-- "Every post @glossier published in the last 30 days with likes, comments and plays."
+- "Transcribe the last 20 reels from @nasa and group the opening lines into hook types."
+- "Every post [a brand handle] published in the last 30 days with likes, comments and plays."
 - "Vet @somecreator: engagement rate over the last 30 posts, paid-partnership posts, and 20 similar accounts with a contact in their bio."
 - "Reels using this sound: https://www.instagram.com/reels/audio/271328201351336/"
 
@@ -207,8 +210,10 @@ Instagram:
 - **YouTube dislikes are estimates** from the community
   [Return YouTube Dislike](https://returnyoutubedislike.com) database, most accurate on older
   videos. YouTube removed public dislike counts in 2021.
-- **YouTube transcripts** are not a feature here; subtitle languages are listed, subtitle
-  text is best-effort.
+- **YouTube transcripts** are not a feature here. With `includeSubtitles` on, the available
+  subtitle languages are listed (best-effort); subtitle text is not reliable.
+- **YouTube `duration`** is filled on search rows only for now; channel, playlist and
+  video-URL rows leave it empty.
 - **Instagram hashtags and keywords** return the curated top posts Instagram shows publicly,
   typically about 60 per term.
 - **Instagram creator signals** are public engagement numbers. There are no audience
@@ -227,7 +232,7 @@ and `io.github.ArpitGandhi1934/yugenox-instagram-scraper`. The entries live in
 ## About
 
 Built by Yugenox Corporation, Toronto. Questions or a bug: open an issue here or on the
-Actor's Issues tab on Apify. Not affiliated with YouTube, Instagram, Meta, Google, OpenAI or
-Anthropic.
+Actor's Issues tab on Apify. Uses public data only. Not affiliated with or endorsed by
+YouTube, Google, Instagram, Meta, OpenAI or Anthropic.
 
 MIT licensed (this repo's configs and examples). The Actors are paid services on Apify.

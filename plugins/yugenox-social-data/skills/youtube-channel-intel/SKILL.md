@@ -12,7 +12,7 @@ The tool is `yugenox--youtube-scraper` on the `yugenox-social` MCP server. The f
 
 ## Example prompts
 
-- "Pull the last 50 videos from @mkbhd with views, likes and publish dates, then flag the ones above 2x the channel median."
+- "Pull the last 50 videos from @NASA with views, likes and publish dates, then flag the ones above 2x the channel median."
 - "Top 30 videos about 'home espresso' uploaded this month, sorted by views, with 10 top comments each. What do people complain about?"
 - "Before we sponsor @somecreator: average views over their last 30 uploads, like rate, estimated dislike ratio and the links in their descriptions."
 
@@ -29,20 +29,22 @@ Out of scope: full spoken transcripts (subtitle text is best-effort; say so and 
 
 | Goal | Input |
 |---|---|
-| Whole channel | `{"channels":["@mkbhd"],"maxItems":100}` |
-| Creator audit with sentiment | `{"channels":["@mkbhd"],"maxItems":30,"includeDislikes":true,"maxComments":20}` |
+| Whole channel | `{"channels":["@NASA"],"maxItems":100}` |
+| Creator audit with sentiment | `{"channels":["@NASA"],"maxItems":30,"includeDislikes":true,"maxComments":20}` |
 | Trending in a niche | `{"searchTerms":["home espresso"],"dateFilter":"month","sortBy":"views","maxItems":50}` |
 | Specific videos | `{"startUrls":["https://www.youtube.com/watch?v=dQw4w9WgXcQ"],"includeDislikes":true}` |
 | Shorts in a niche | `{"searchTerms":["cat shorts"],"includeShorts":true,"maxItems":30}` |
 
 ## Output fields worth knowing
 
-`title`, `url`, `viewCount`, `likes`, `dislikes` (estimate), `duration`, `date`, `publishedAt` (YYYY-MM-DD), `channelName`, `channelUrl`, `numberOfSubscribers`, `text` (description), `hashtags`, `descriptionLinks` (`{url, text}` from the public description: socials, sponsors, contact pages), `commentsCount`, `comments` (author, text, likes, replyCount, publishedTime), `isShort`, `availableSubtitles`.
+`title`, `url`, `viewCount`, `likes`, `dislikes` (estimate), `duration` (search rows only for now), `date`, `publishedAt` (YYYY-MM-DD), `channelName`, `channelUrl`, `numberOfSubscribers`, `text` (description), `hashtags`, `descriptionLinks` (`{url, text}` from the public description: socials, sponsors, contact pages), `commentsCount`, `comments` (author, text, likes, replyCount, publishedTime), `isShort`, `error` (on error rows). `availableSubtitles` only with `includeSubtitles` on, best-effort.
 
 ## Honest limits
 
 - **Dislikes are estimates** from the community [Return YouTube Dislike](https://returnyoutubedislike.com) database, most accurate on older videos. Always call them estimates and credit Return YouTube Dislike.
 - `dateFilter` and `sortBy` apply to `searchTerms` only, not to channel or video URLs.
 - `publishedAt` is null when YouTube shows a relative date ("3 weeks ago"); fall back to `date`.
-- Shorts are off by default; `duration` is not available on Shorts.
+- Shorts are off by default; `duration` is not available on Shorts, and channel, playlist and video-URL rows leave it empty for now.
+- Every saved row costs $0.002, including error rows: an empty or over-filtered search, an unknown channel or playlist, and an unavailable, private or age-restricted video each save one row with an `error` field. Check channel names on a small run first.
+- Subtitles: with `includeSubtitles` on, the available languages are listed (best-effort); subtitle text is not reliable. Don't offer transcripts.
 - Results include public channel names in comments. The user must handle them under GDPR, PIPEDA or CCPA.
