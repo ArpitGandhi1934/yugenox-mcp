@@ -46,7 +46,7 @@ async def main() -> None:
         )
         result = await Runner.run(
             agent,
-            "Compare @nike on Instagram (last 10 posts) with the Nike YouTube channel (last 10 "
+            "Compare @nasa on Instagram (last 10 posts) with the NASA YouTube channel (last 10 "
             "videos): average likes, comments and views per post, and which format wins.",
         )
         print(result.final_output)

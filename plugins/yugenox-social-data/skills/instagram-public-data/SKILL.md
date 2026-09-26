@@ -32,8 +32,8 @@ Out of scope: stories, highlights content, follower or following lists, tagged p
 | Reels with transcripts | `{"startUrls":["https://www.instagram.com/nike/reels/"],"includeTranscript":true,"maxItems":20}` |
 | Last 30 days from a profile | `{"startUrls":["https://www.instagram.com/nike/"],"until":"30 days","maxItems":100}` |
 | Hashtag + latest comments | `{"startUrls":["#travel"],"commentsPerPost":10,"maxItems":60}` |
-| Creator vetting row + lookalikes | `{"startUrls":["allbirds"],"resultsType":"details","includeRelatedProfiles":true,"maxItems":1}` |
-| Lookalike business profiles with a contact | `{"startUrls":["allbirds"],"resultsType":"details","scrapeRelatedProfiles":30,"businessOnly":true,"withContactOnly":true,"maxItems":30}` |
+| Creator vetting row + lookalikes | `{"startUrls":["nasa"],"resultsType":"details","includeRelatedProfiles":true,"maxItems":1}` |
+| Lookalike business profiles with a contact | `{"startUrls":["nasa"],"resultsType":"details","scrapeRelatedProfiles":30,"businessOnly":true,"withContactOnly":true,"maxItems":30}` |
 | Comments on one post | `{"startUrls":["https://www.instagram.com/p/DRvit9Ejgel/"],"resultsType":"comments","maxComments":200}` |
 
 ## Output fields worth knowing
