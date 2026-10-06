@@ -129,5 +129,192 @@
         }
       }
     }
+  },
+  "canada-grocery": {
+    "name": "yugenox-canada-grocery",
+    "mcpUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/loblaws-grocery-scraper,yugenox/instacart-grocery-scraper,yugenox/costco-scraper,yugenox/flipp-flyer-deals-scraper",
+    "tools": [
+      "fetch-actor-details",
+      "yugenox--loblaws-grocery-scraper",
+      "yugenox--instacart-grocery-scraper",
+      "yugenox--costco-scraper",
+      "yugenox--flipp-flyer-deals-scraper"
+    ],
+    "store": "https://apify.com/yugenox",
+    "registryName": "io.github.ArpitGandhi1934/yugenox-canada-grocery-prices",
+    "claudeCode": "claude mcp add --transport http yugenox-canada-grocery \"https://mcp.apify.com/?tools=fetch-actor-details,yugenox/loblaws-grocery-scraper,yugenox/instacart-grocery-scraper,yugenox/costco-scraper,yugenox/flipp-flyer-deals-scraper\"",
+    "cursorDeeplink": "cursor://anysphere.cursor-deeplink/mcp/install?name=yugenox-canada-grocery&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9sb2JsYXdzLWdyb2Nlcnktc2NyYXBlcix5dWdlbm94L2luc3RhY2FydC1ncm9jZXJ5LXNjcmFwZXIseXVnZW5veC9jb3N0Y28tc2NyYXBlcix5dWdlbm94L2ZsaXBwLWZseWVyLWRlYWxzLXNjcmFwZXIifQ==",
+    "cursorWebLink": "https://cursor.com/en/install-mcp?name=yugenox-canada-grocery&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9sb2JsYXdzLWdyb2Nlcnktc2NyYXBlcix5dWdlbm94L2luc3RhY2FydC1ncm9jZXJ5LXNjcmFwZXIseXVnZW5veC9jb3N0Y28tc2NyYXBlcix5dWdlbm94L2ZsaXBwLWZseWVyLWRlYWxzLXNjcmFwZXIifQ%3D%3D",
+    "vscodeDeeplink": "vscode:mcp/install?%7B%22name%22%3A%22yugenox-canada-grocery%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Floblaws-grocery-scraper%2Cyugenox%2Finstacart-grocery-scraper%2Cyugenox%2Fcostco-scraper%2Cyugenox%2Fflipp-flyer-deals-scraper%22%7D",
+    "vscodeWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-canada-grocery&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Floblaws-grocery-scraper%2Cyugenox%2Finstacart-grocery-scraper%2Cyugenox%2Fcostco-scraper%2Cyugenox%2Fflipp-flyer-deals-scraper%22%7D",
+    "vscodeInsidersWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-canada-grocery&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Floblaws-grocery-scraper%2Cyugenox%2Finstacart-grocery-scraper%2Cyugenox%2Fcostco-scraper%2Cyugenox%2Fflipp-flyer-deals-scraper%22%7D&quality=insiders",
+    "jsonConfig": {
+      "mcpServers": {
+        "yugenox-canada-grocery": {
+          "type": "http",
+          "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/loblaws-grocery-scraper,yugenox/instacart-grocery-scraper,yugenox/costco-scraper,yugenox/flipp-flyer-deals-scraper"
+        }
+      }
+    },
+    "windsurfConfig": {
+      "mcpServers": {
+        "yugenox-canada-grocery": {
+          "serverUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/loblaws-grocery-scraper,yugenox/instacart-grocery-scraper,yugenox/costco-scraper,yugenox/flipp-flyer-deals-scraper"
+        }
+      }
+    },
+    "stdioBridgeConfig": {
+      "mcpServers": {
+        "yugenox-canada-grocery": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "mcp-remote",
+            "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/loblaws-grocery-scraper,yugenox/instacart-grocery-scraper,yugenox/costco-scraper,yugenox/flipp-flyer-deals-scraper"
+          ]
+        }
+      }
+    }
+  },
+  "canada-stock": {
+    "name": "yugenox-canada-store-stock",
+    "mcpUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/canadian-tire-scraper,yugenox/home-depot-canada-scraper,yugenox/home-hardware-canada-scraper,yugenox/princess-auto-scraper,yugenox/bestbuy-canada-scraper,yugenox/shoppers-drug-mart-scraper,yugenox/lcbo-products-scraper,yugenox/saq-scraper",
+    "tools": [
+      "fetch-actor-details",
+      "yugenox--canadian-tire-scraper",
+      "yugenox--home-depot-canada-scraper",
+      "yugenox--home-hardware-canada-scraper",
+      "yugenox--princess-auto-scraper",
+      "yugenox--bestbuy-canada-scraper",
+      "yugenox--shoppers-drug-mart-scraper",
+      "yugenox--lcbo-products-scraper",
+      "yugenox--saq-scraper"
+    ],
+    "store": "https://apify.com/yugenox",
+    "registryName": "io.github.ArpitGandhi1934/yugenox-canada-retail-store-stock",
+    "claudeCode": "claude mcp add --transport http yugenox-canada-store-stock \"https://mcp.apify.com/?tools=fetch-actor-details,yugenox/canadian-tire-scraper,yugenox/home-depot-canada-scraper,yugenox/home-hardware-canada-scraper,yugenox/princess-auto-scraper,yugenox/bestbuy-canada-scraper,yugenox/shoppers-drug-mart-scraper,yugenox/lcbo-products-scraper,yugenox/saq-scraper\"",
+    "cursorDeeplink": "cursor://anysphere.cursor-deeplink/mcp/install?name=yugenox-canada-store-stock&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9jYW5hZGlhbi10aXJlLXNjcmFwZXIseXVnZW5veC9ob21lLWRlcG90LWNhbmFkYS1zY3JhcGVyLHl1Z2Vub3gvaG9tZS1oYXJkd2FyZS1jYW5hZGEtc2NyYXBlcix5dWdlbm94L3ByaW5jZXNzLWF1dG8tc2NyYXBlcix5dWdlbm94L2Jlc3RidXktY2FuYWRhLXNjcmFwZXIseXVnZW5veC9zaG9wcGVycy1kcnVnLW1hcnQtc2NyYXBlcix5dWdlbm94L2xjYm8tcHJvZHVjdHMtc2NyYXBlcix5dWdlbm94L3NhcS1zY3JhcGVyIn0=",
+    "cursorWebLink": "https://cursor.com/en/install-mcp?name=yugenox-canada-store-stock&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9jYW5hZGlhbi10aXJlLXNjcmFwZXIseXVnZW5veC9ob21lLWRlcG90LWNhbmFkYS1zY3JhcGVyLHl1Z2Vub3gvaG9tZS1oYXJkd2FyZS1jYW5hZGEtc2NyYXBlcix5dWdlbm94L3ByaW5jZXNzLWF1dG8tc2NyYXBlcix5dWdlbm94L2Jlc3RidXktY2FuYWRhLXNjcmFwZXIseXVnZW5veC9zaG9wcGVycy1kcnVnLW1hcnQtc2NyYXBlcix5dWdlbm94L2xjYm8tcHJvZHVjdHMtc2NyYXBlcix5dWdlbm94L3NhcS1zY3JhcGVyIn0%3D",
+    "vscodeDeeplink": "vscode:mcp/install?%7B%22name%22%3A%22yugenox-canada-store-stock%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fcanadian-tire-scraper%2Cyugenox%2Fhome-depot-canada-scraper%2Cyugenox%2Fhome-hardware-canada-scraper%2Cyugenox%2Fprincess-auto-scraper%2Cyugenox%2Fbestbuy-canada-scraper%2Cyugenox%2Fshoppers-drug-mart-scraper%2Cyugenox%2Flcbo-products-scraper%2Cyugenox%2Fsaq-scraper%22%7D",
+    "vscodeWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-canada-store-stock&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fcanadian-tire-scraper%2Cyugenox%2Fhome-depot-canada-scraper%2Cyugenox%2Fhome-hardware-canada-scraper%2Cyugenox%2Fprincess-auto-scraper%2Cyugenox%2Fbestbuy-canada-scraper%2Cyugenox%2Fshoppers-drug-mart-scraper%2Cyugenox%2Flcbo-products-scraper%2Cyugenox%2Fsaq-scraper%22%7D",
+    "vscodeInsidersWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-canada-store-stock&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fcanadian-tire-scraper%2Cyugenox%2Fhome-depot-canada-scraper%2Cyugenox%2Fhome-hardware-canada-scraper%2Cyugenox%2Fprincess-auto-scraper%2Cyugenox%2Fbestbuy-canada-scraper%2Cyugenox%2Fshoppers-drug-mart-scraper%2Cyugenox%2Flcbo-products-scraper%2Cyugenox%2Fsaq-scraper%22%7D&quality=insiders",
+    "jsonConfig": {
+      "mcpServers": {
+        "yugenox-canada-store-stock": {
+          "type": "http",
+          "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/canadian-tire-scraper,yugenox/home-depot-canada-scraper,yugenox/home-hardware-canada-scraper,yugenox/princess-auto-scraper,yugenox/bestbuy-canada-scraper,yugenox/shoppers-drug-mart-scraper,yugenox/lcbo-products-scraper,yugenox/saq-scraper"
+        }
+      }
+    },
+    "windsurfConfig": {
+      "mcpServers": {
+        "yugenox-canada-store-stock": {
+          "serverUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/canadian-tire-scraper,yugenox/home-depot-canada-scraper,yugenox/home-hardware-canada-scraper,yugenox/princess-auto-scraper,yugenox/bestbuy-canada-scraper,yugenox/shoppers-drug-mart-scraper,yugenox/lcbo-products-scraper,yugenox/saq-scraper"
+        }
+      }
+    },
+    "stdioBridgeConfig": {
+      "mcpServers": {
+        "yugenox-canada-store-stock": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "mcp-remote",
+            "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/canadian-tire-scraper,yugenox/home-depot-canada-scraper,yugenox/home-hardware-canada-scraper,yugenox/princess-auto-scraper,yugenox/bestbuy-canada-scraper,yugenox/shoppers-drug-mart-scraper,yugenox/lcbo-products-scraper,yugenox/saq-scraper"
+          ]
+        }
+      }
+    }
+  },
+  "canada-real-estate": {
+    "name": "yugenox-realtor-ca",
+    "mcpUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/realtor-ca-property-scraper,yugenox/realtor-ca-agent-scraper,yugenox/kijiji-scraper",
+    "tools": [
+      "fetch-actor-details",
+      "yugenox--realtor-ca-property-scraper",
+      "yugenox--realtor-ca-agent-scraper",
+      "yugenox--kijiji-scraper"
+    ],
+    "store": "https://apify.com/yugenox/realtor-ca-property-scraper",
+    "registryName": "io.github.ArpitGandhi1934/yugenox-realtor-ca-real-estate",
+    "claudeCode": "claude mcp add --transport http yugenox-realtor-ca \"https://mcp.apify.com/?tools=fetch-actor-details,yugenox/realtor-ca-property-scraper,yugenox/realtor-ca-agent-scraper,yugenox/kijiji-scraper\"",
+    "cursorDeeplink": "cursor://anysphere.cursor-deeplink/mcp/install?name=yugenox-realtor-ca&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9yZWFsdG9yLWNhLXByb3BlcnR5LXNjcmFwZXIseXVnZW5veC9yZWFsdG9yLWNhLWFnZW50LXNjcmFwZXIseXVnZW5veC9raWppamktc2NyYXBlciJ9",
+    "cursorWebLink": "https://cursor.com/en/install-mcp?name=yugenox-realtor-ca&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9yZWFsdG9yLWNhLXByb3BlcnR5LXNjcmFwZXIseXVnZW5veC9yZWFsdG9yLWNhLWFnZW50LXNjcmFwZXIseXVnZW5veC9raWppamktc2NyYXBlciJ9",
+    "vscodeDeeplink": "vscode:mcp/install?%7B%22name%22%3A%22yugenox-realtor-ca%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Frealtor-ca-property-scraper%2Cyugenox%2Frealtor-ca-agent-scraper%2Cyugenox%2Fkijiji-scraper%22%7D",
+    "vscodeWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-realtor-ca&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Frealtor-ca-property-scraper%2Cyugenox%2Frealtor-ca-agent-scraper%2Cyugenox%2Fkijiji-scraper%22%7D",
+    "vscodeInsidersWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-realtor-ca&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Frealtor-ca-property-scraper%2Cyugenox%2Frealtor-ca-agent-scraper%2Cyugenox%2Fkijiji-scraper%22%7D&quality=insiders",
+    "jsonConfig": {
+      "mcpServers": {
+        "yugenox-realtor-ca": {
+          "type": "http",
+          "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/realtor-ca-property-scraper,yugenox/realtor-ca-agent-scraper,yugenox/kijiji-scraper"
+        }
+      }
+    },
+    "windsurfConfig": {
+      "mcpServers": {
+        "yugenox-realtor-ca": {
+          "serverUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/realtor-ca-property-scraper,yugenox/realtor-ca-agent-scraper,yugenox/kijiji-scraper"
+        }
+      }
+    },
+    "stdioBridgeConfig": {
+      "mcpServers": {
+        "yugenox-realtor-ca": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "mcp-remote",
+            "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/realtor-ca-property-scraper,yugenox/realtor-ca-agent-scraper,yugenox/kijiji-scraper"
+          ]
+        }
+      }
+    }
+  },
+  "ats-jobs": {
+    "name": "yugenox-ats-jobs",
+    "mcpUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/workday-jobs-scraper,yugenox/ats-jobs-search,yugenox/ats-jobs-scraper,yugenox/icims-careers-scraper",
+    "tools": [
+      "fetch-actor-details",
+      "yugenox--workday-jobs-scraper",
+      "yugenox--ats-jobs-search",
+      "yugenox--ats-jobs-scraper",
+      "yugenox--icims-careers-scraper"
+    ],
+    "store": "https://apify.com/yugenox",
+    "registryName": "io.github.ArpitGandhi1934/yugenox-ats-jobs-salaries",
+    "claudeCode": "claude mcp add --transport http yugenox-ats-jobs \"https://mcp.apify.com/?tools=fetch-actor-details,yugenox/workday-jobs-scraper,yugenox/ats-jobs-search,yugenox/ats-jobs-scraper,yugenox/icims-careers-scraper\"",
+    "cursorDeeplink": "cursor://anysphere.cursor-deeplink/mcp/install?name=yugenox-ats-jobs&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC93b3JrZGF5LWpvYnMtc2NyYXBlcix5dWdlbm94L2F0cy1qb2JzLXNlYXJjaCx5dWdlbm94L2F0cy1qb2JzLXNjcmFwZXIseXVnZW5veC9pY2ltcy1jYXJlZXJzLXNjcmFwZXIifQ==",
+    "cursorWebLink": "https://cursor.com/en/install-mcp?name=yugenox-ats-jobs&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC93b3JrZGF5LWpvYnMtc2NyYXBlcix5dWdlbm94L2F0cy1qb2JzLXNlYXJjaCx5dWdlbm94L2F0cy1qb2JzLXNjcmFwZXIseXVnZW5veC9pY2ltcy1jYXJlZXJzLXNjcmFwZXIifQ%3D%3D",
+    "vscodeDeeplink": "vscode:mcp/install?%7B%22name%22%3A%22yugenox-ats-jobs%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fworkday-jobs-scraper%2Cyugenox%2Fats-jobs-search%2Cyugenox%2Fats-jobs-scraper%2Cyugenox%2Ficims-careers-scraper%22%7D",
+    "vscodeWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-ats-jobs&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fworkday-jobs-scraper%2Cyugenox%2Fats-jobs-search%2Cyugenox%2Fats-jobs-scraper%2Cyugenox%2Ficims-careers-scraper%22%7D",
+    "vscodeInsidersWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-ats-jobs&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fworkday-jobs-scraper%2Cyugenox%2Fats-jobs-search%2Cyugenox%2Fats-jobs-scraper%2Cyugenox%2Ficims-careers-scraper%22%7D&quality=insiders",
+    "jsonConfig": {
+      "mcpServers": {
+        "yugenox-ats-jobs": {
+          "type": "http",
+          "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/workday-jobs-scraper,yugenox/ats-jobs-search,yugenox/ats-jobs-scraper,yugenox/icims-careers-scraper"
+        }
+      }
+    },
+    "windsurfConfig": {
+      "mcpServers": {
+        "yugenox-ats-jobs": {
+          "serverUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/workday-jobs-scraper,yugenox/ats-jobs-search,yugenox/ats-jobs-scraper,yugenox/icims-careers-scraper"
+        }
+      }
+    },
+    "stdioBridgeConfig": {
+      "mcpServers": {
+        "yugenox-ats-jobs": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "mcp-remote",
+            "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/workday-jobs-scraper,yugenox/ats-jobs-search,yugenox/ats-jobs-scraper,yugenox/icims-careers-scraper"
+          ]
+        }
+      }
+    }
   }
 }

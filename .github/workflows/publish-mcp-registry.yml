@@ -1,8 +1,8 @@
 name: Publish to MCP Registry
 
-# Publishes registry/{instagram,youtube,social}/server.json to registry.modelcontextprotocol.io.
-# Trigger: push a tag like v1.0.1. The tag (minus the "v") becomes the version of all three
-# entries, because the registry rejects a version that already exists.
+# Publishes every registry/*/server.json (7 entries since v1.1.0) to registry.modelcontextprotocol.io.
+# Trigger: push a tag like v1.1.1. The tag (minus the "v") becomes the version of every entry,
+# because the registry rejects a version that already exists.
 # Auth: GitHub Actions OIDC, which grants the io.github.<repo owner>/* namespace. No secrets.
 
 on:
@@ -55,8 +55,8 @@ jobs:
 
       - name: Validate
         run: |
-          for dir in instagram youtube social; do
-            ./mcp-publisher validate "registry/$dir/server.json"
+          for f in registry/*/server.json; do
+            ./mcp-publisher validate "$f"
           done
 
       - name: Login (GitHub OIDC)
@@ -64,9 +64,9 @@ jobs:
 
       - name: Publish
         run: |
-          for dir in instagram youtube social; do
-            echo "::group::$dir"
-            ./mcp-publisher publish "registry/$dir/server.json"
+          for f in registry/*/server.json; do
+            echo "::group::$f"
+            ./mcp-publisher publish "$f"
             echo "::endgroup::"
           done
 

@@ -1,18 +1,18 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.ArpitGandhi1934/yugenox-instagram-scraper",
-  "title": "Instagram Scraper: Reels to Text, Posts, Comments, No Login",
-  "description": "Public Instagram reels, posts, profiles and comments, plus reel-to-text transcripts. No login.",
+  "name": "io.github.ArpitGandhi1934/yugenox-realtor-ca-real-estate",
+  "title": "Realtor.ca Listings + Agents (Yugenox)",
+  "description": "Realtor.ca listings for sale or rent, the agent directory, and Kijiji rentals. Pay per result.",
   "repository": {
     "url": "https://github.com/ArpitGandhi1934/yugenox-mcp",
     "source": "github"
   },
   "version": "1.1.0",
-  "websiteUrl": "https://apify.com/yugenox/instagram-scraper",
+  "websiteUrl": "https://apify.com/yugenox/realtor-ca-property-scraper",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-scraper",
+      "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/realtor-ca-property-scraper,yugenox/realtor-ca-agent-scraper,yugenox/kijiji-scraper",
       "headers": [
         {
           "name": "Authorization",

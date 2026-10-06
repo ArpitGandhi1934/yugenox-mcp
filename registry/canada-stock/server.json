@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.ArpitGandhi1934/yugenox-social-data",
-  "title": "Instagram + YouTube Data for AI Agents (Yugenox)",
-  "description": "Public Instagram and YouTube data for AI agents: reels, videos, channels, comments. Pay per result.",
+  "name": "io.github.ArpitGandhi1934/yugenox-canada-retail-store-stock",
+  "title": "Canadian Retail Prices + Store Stock (Yugenox)",
+  "description": "Canadian retail prices and store stock: Canadian Tire, Home Depot CA, Best Buy CA, LCBO, SAQ, more.",
   "repository": {
     "url": "https://github.com/ArpitGandhi1934/yugenox-mcp",
     "source": "github"
@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-scraper,yugenox/youtube-scraper",
+      "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/canadian-tire-scraper,yugenox/home-depot-canada-scraper,yugenox/home-hardware-canada-scraper,yugenox/princess-auto-scraper,yugenox/bestbuy-canada-scraper,yugenox/shoppers-drug-mart-scraper,yugenox/lcbo-products-scraper,yugenox/saq-scraper",
       "headers": [
         {
           "name": "Authorization",

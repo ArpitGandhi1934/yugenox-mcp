@@ -1,9 +1,14 @@
-// Single source of truth for the three pinned Apify MCP URLs.
+// Single source of truth for the pinned Apify MCP URLs (3 social + 4 Canada/jobs verticals).
 // install-links.json and the README tables are generated/checked from this file.
 //
 // fetch-actor-details is pinned alongside each actor so an agent can read the README and
 // the current price before its first paid run. Apify adds get-actor-run, get-dataset-items,
 // get-key-value-store-record and abort-actor-run on its own.
+//
+// Vertical lists (2026-10-06): an actor is pinned only if it returns rows on an ordinary Apify
+// plan, without a special proxy group on the caller's account. That is why save-on-foods-scraper
+// (needs Apify's UNBLOCKER group) is not in the grocery server. Run scripts/check-actors.mjs before
+// every tag: each pinned actor must be public, have no notice and a built default version.
 //
 // AFFILIATE: no ?fpr= parameter anywhere yet (no Apify affiliate id). Store links only.
 
@@ -29,6 +34,57 @@ export const SERVERS = [
     name: 'yugenox-social',
     registryName: 'io.github.ArpitGandhi1934/yugenox-social-data',
     actors: ['yugenox/instagram-scraper', 'yugenox/youtube-scraper'],
+    store: 'https://apify.com/yugenox',
+  },
+  {
+    key: 'canada-grocery',
+    name: 'yugenox-canada-grocery',
+    registryName: 'io.github.ArpitGandhi1934/yugenox-canada-grocery-prices',
+    actors: [
+      'yugenox/loblaws-grocery-scraper',
+      'yugenox/instacart-grocery-scraper',
+      'yugenox/costco-scraper',
+      'yugenox/flipp-flyer-deals-scraper',
+    ],
+    store: 'https://apify.com/yugenox',
+  },
+  {
+    key: 'canada-stock',
+    name: 'yugenox-canada-store-stock',
+    registryName: 'io.github.ArpitGandhi1934/yugenox-canada-retail-store-stock',
+    actors: [
+      'yugenox/canadian-tire-scraper',
+      'yugenox/home-depot-canada-scraper',
+      'yugenox/home-hardware-canada-scraper',
+      'yugenox/princess-auto-scraper',
+      'yugenox/bestbuy-canada-scraper',
+      'yugenox/shoppers-drug-mart-scraper',
+      'yugenox/lcbo-products-scraper',
+      'yugenox/saq-scraper',
+    ],
+    store: 'https://apify.com/yugenox',
+  },
+  {
+    key: 'canada-real-estate',
+    name: 'yugenox-realtor-ca',
+    registryName: 'io.github.ArpitGandhi1934/yugenox-realtor-ca-real-estate',
+    actors: [
+      'yugenox/realtor-ca-property-scraper',
+      'yugenox/realtor-ca-agent-scraper',
+      'yugenox/kijiji-scraper',
+    ],
+    store: 'https://apify.com/yugenox/realtor-ca-property-scraper',
+  },
+  {
+    key: 'ats-jobs',
+    name: 'yugenox-ats-jobs',
+    registryName: 'io.github.ArpitGandhi1934/yugenox-ats-jobs-salaries',
+    actors: [
+      'yugenox/workday-jobs-scraper',
+      'yugenox/ats-jobs-search',
+      'yugenox/ats-jobs-scraper',
+      'yugenox/icims-careers-scraper',
+    ],
     store: 'https://apify.com/yugenox',
   },
 ];
