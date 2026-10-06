@@ -295,8 +295,8 @@ claude mcp add --transport http yugenox-ats-jobs "https://mcp.apify.com/?tools=f
 
 **Limits for these servers.** Public pages only: no logins, and Realtor.ca coverage is active
 listings (no sold history). Prices and stock are what each retailer shows for the chosen store or
-postal code at run time. A Realtor.ca search area returns up to about 600 listings (search several
-smaller areas for more), and the agent search does not take postal codes. Instacart and Home Depot
+postal code at run time. The Realtor.ca listings search covers 18 major cities and returns up to 500
+listings per city, newest first, and the agent search does not take postal codes. Instacart and Home Depot
 Canada work best on Apify residential proxies; on a plan without them they fall back to datacenter
 IPs, which is slower and may miss some results. Salaries appear only where the employer publishes
 them. Realtor.ca rows include agent names and phone numbers, Kijiji listing text can include
