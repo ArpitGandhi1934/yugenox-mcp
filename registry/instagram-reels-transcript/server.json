@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ArpitGandhi1934/yugenox-instagram-reels-transcript",
+  "title": "Instagram Reels to Text: AI Transcripts, No Login",
+  "description": "Spoken words from public Instagram reels as text, with each reel's caption and stats. No login.",
+  "repository": {
+    "url": "https://github.com/ArpitGandhi1934/yugenox-mcp",
+    "source": "github"
+  },
+  "version": "1.1.0",
+  "websiteUrl": "https://apify.com/yugenox/instagram-reels-transcript",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-reels-transcript",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. Clients with OAuth sign in to Apify instead. Otherwise your own Apify token as Bearer <token>.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

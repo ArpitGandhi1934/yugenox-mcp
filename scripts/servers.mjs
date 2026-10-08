@@ -1,4 +1,4 @@
-// Single source of truth for the pinned Apify MCP URLs (3 social + 4 Canada/jobs verticals).
+// Single source of truth for the pinned Apify MCP URLs (6 social + 4 Canada/jobs verticals).
 // install-links.json and the README tables are generated/checked from this file.
 //
 // fetch-actor-details is pinned alongside each actor so an agent can read the README and
@@ -35,6 +35,29 @@ export const SERVERS = [
     registryName: 'io.github.ArpitGandhi1934/yugenox-social-data',
     actors: ['yugenox/instagram-scraper', 'yugenox/youtube-scraper'],
     store: 'https://apify.com/yugenox',
+  },
+  // Single-purpose Instagram/YouTube actors with paying demand (growth backlog M2, 2026-10-08):
+  // comments is our #2 actor by customer runs; reel transcripts and the YouTube summarizer had paying bursts.
+  {
+    key: 'instagram-comments',
+    name: 'yugenox-instagram-comments',
+    registryName: 'io.github.ArpitGandhi1934/yugenox-instagram-comments',
+    actors: ['yugenox/instagram-comments-scraper'],
+    store: 'https://apify.com/yugenox/instagram-comments-scraper',
+  },
+  {
+    key: 'instagram-reels-transcript',
+    name: 'yugenox-reels-transcript',
+    registryName: 'io.github.ArpitGandhi1934/yugenox-instagram-reels-transcript',
+    actors: ['yugenox/instagram-reels-transcript'],
+    store: 'https://apify.com/yugenox/instagram-reels-transcript',
+  },
+  {
+    key: 'youtube-summarizer',
+    name: 'yugenox-youtube-summarizer',
+    registryName: 'io.github.ArpitGandhi1934/yugenox-youtube-ai-summarizer',
+    actors: ['yugenox/youtube-ai-video-summarizer'],
+    store: 'https://apify.com/yugenox/youtube-ai-video-summarizer',
   },
   {
     key: 'canada-grocery',

@@ -130,6 +130,135 @@
       }
     }
   },
+  "instagram-comments": {
+    "name": "yugenox-instagram-comments",
+    "mcpUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-comments-scraper",
+    "tools": [
+      "fetch-actor-details",
+      "yugenox--instagram-comments-scraper"
+    ],
+    "store": "https://apify.com/yugenox/instagram-comments-scraper",
+    "registryName": "io.github.ArpitGandhi1934/yugenox-instagram-comments",
+    "claudeCode": "claude mcp add --transport http yugenox-instagram-comments \"https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-comments-scraper\"",
+    "cursorDeeplink": "cursor://anysphere.cursor-deeplink/mcp/install?name=yugenox-instagram-comments&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9pbnN0YWdyYW0tY29tbWVudHMtc2NyYXBlciJ9",
+    "cursorWebLink": "https://cursor.com/en/install-mcp?name=yugenox-instagram-comments&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9pbnN0YWdyYW0tY29tbWVudHMtc2NyYXBlciJ9",
+    "vscodeDeeplink": "vscode:mcp/install?%7B%22name%22%3A%22yugenox-instagram-comments%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Finstagram-comments-scraper%22%7D",
+    "vscodeWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-instagram-comments&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Finstagram-comments-scraper%22%7D",
+    "vscodeInsidersWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-instagram-comments&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Finstagram-comments-scraper%22%7D&quality=insiders",
+    "jsonConfig": {
+      "mcpServers": {
+        "yugenox-instagram-comments": {
+          "type": "http",
+          "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-comments-scraper"
+        }
+      }
+    },
+    "windsurfConfig": {
+      "mcpServers": {
+        "yugenox-instagram-comments": {
+          "serverUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-comments-scraper"
+        }
+      }
+    },
+    "stdioBridgeConfig": {
+      "mcpServers": {
+        "yugenox-instagram-comments": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "mcp-remote",
+            "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-comments-scraper"
+          ]
+        }
+      }
+    }
+  },
+  "instagram-reels-transcript": {
+    "name": "yugenox-reels-transcript",
+    "mcpUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-reels-transcript",
+    "tools": [
+      "fetch-actor-details",
+      "yugenox--instagram-reels-transcript"
+    ],
+    "store": "https://apify.com/yugenox/instagram-reels-transcript",
+    "registryName": "io.github.ArpitGandhi1934/yugenox-instagram-reels-transcript",
+    "claudeCode": "claude mcp add --transport http yugenox-reels-transcript \"https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-reels-transcript\"",
+    "cursorDeeplink": "cursor://anysphere.cursor-deeplink/mcp/install?name=yugenox-reels-transcript&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9pbnN0YWdyYW0tcmVlbHMtdHJhbnNjcmlwdCJ9",
+    "cursorWebLink": "https://cursor.com/en/install-mcp?name=yugenox-reels-transcript&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9pbnN0YWdyYW0tcmVlbHMtdHJhbnNjcmlwdCJ9",
+    "vscodeDeeplink": "vscode:mcp/install?%7B%22name%22%3A%22yugenox-reels-transcript%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Finstagram-reels-transcript%22%7D",
+    "vscodeWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-reels-transcript&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Finstagram-reels-transcript%22%7D",
+    "vscodeInsidersWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-reels-transcript&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Finstagram-reels-transcript%22%7D&quality=insiders",
+    "jsonConfig": {
+      "mcpServers": {
+        "yugenox-reels-transcript": {
+          "type": "http",
+          "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-reels-transcript"
+        }
+      }
+    },
+    "windsurfConfig": {
+      "mcpServers": {
+        "yugenox-reels-transcript": {
+          "serverUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-reels-transcript"
+        }
+      }
+    },
+    "stdioBridgeConfig": {
+      "mcpServers": {
+        "yugenox-reels-transcript": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "mcp-remote",
+            "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-reels-transcript"
+          ]
+        }
+      }
+    }
+  },
+  "youtube-summarizer": {
+    "name": "yugenox-youtube-summarizer",
+    "mcpUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/youtube-ai-video-summarizer",
+    "tools": [
+      "fetch-actor-details",
+      "yugenox--youtube-ai-video-summarizer"
+    ],
+    "store": "https://apify.com/yugenox/youtube-ai-video-summarizer",
+    "registryName": "io.github.ArpitGandhi1934/yugenox-youtube-ai-summarizer",
+    "claudeCode": "claude mcp add --transport http yugenox-youtube-summarizer \"https://mcp.apify.com/?tools=fetch-actor-details,yugenox/youtube-ai-video-summarizer\"",
+    "cursorDeeplink": "cursor://anysphere.cursor-deeplink/mcp/install?name=yugenox-youtube-summarizer&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC95b3V0dWJlLWFpLXZpZGVvLXN1bW1hcml6ZXIifQ==",
+    "cursorWebLink": "https://cursor.com/en/install-mcp?name=yugenox-youtube-summarizer&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC95b3V0dWJlLWFpLXZpZGVvLXN1bW1hcml6ZXIifQ%3D%3D",
+    "vscodeDeeplink": "vscode:mcp/install?%7B%22name%22%3A%22yugenox-youtube-summarizer%22%2C%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fyoutube-ai-video-summarizer%22%7D",
+    "vscodeWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-youtube-summarizer&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fyoutube-ai-video-summarizer%22%7D",
+    "vscodeInsidersWebLink": "https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-youtube-summarizer&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fyoutube-ai-video-summarizer%22%7D&quality=insiders",
+    "jsonConfig": {
+      "mcpServers": {
+        "yugenox-youtube-summarizer": {
+          "type": "http",
+          "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/youtube-ai-video-summarizer"
+        }
+      }
+    },
+    "windsurfConfig": {
+      "mcpServers": {
+        "yugenox-youtube-summarizer": {
+          "serverUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/youtube-ai-video-summarizer"
+        }
+      }
+    },
+    "stdioBridgeConfig": {
+      "mcpServers": {
+        "yugenox-youtube-summarizer": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "mcp-remote",
+            "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/youtube-ai-video-summarizer"
+          ]
+        }
+      }
+    }
+  },
   "canada-grocery": {
     "name": "yugenox-canada-grocery",
     "mcpUrl": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/loblaws-grocery-scraper,yugenox/instacart-grocery-scraper,yugenox/costco-scraper,yugenox/flipp-flyer-deals-scraper",

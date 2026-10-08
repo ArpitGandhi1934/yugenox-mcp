@@ -19,16 +19,20 @@ Apify hosts the MCP server at `mcp.apify.com`, and the URLs below pin it to thes
 | `yugenox-social` | both Actors | `https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-scraper,yugenox/youtube-scraper` |
 | `yugenox-youtube` | YouTube only | `https://mcp.apify.com/?tools=fetch-actor-details,yugenox/youtube-scraper` |
 | `yugenox-instagram` | Instagram only | `https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-scraper` |
+| `yugenox-instagram-comments` | Instagram comments only | `https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-comments-scraper` |
+| `yugenox-reels-transcript` | Instagram reel transcripts only | `https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-reels-transcript` |
+| `yugenox-youtube-summarizer` | YouTube AI summaries only | `https://mcp.apify.com/?tools=fetch-actor-details,yugenox/youtube-ai-video-summarizer` |
 
-Each server exposes `yugenox--youtube-scraper` and/or `yugenox--instagram-scraper`, plus
+Each server exposes its pinned Actors as tools (for example `yugenox--youtube-scraper`), plus
 `fetch-actor-details` (lets the agent read the README and current price before a paid run)
 and Apify's run helpers `get-actor-run`, `get-dataset-items`, `get-key-value-store-record`
 and `abort-actor-run`.
 
-Also in this repo: four more pinned servers for **Canadian grocery prices, Canadian retail
-store stock, Realtor.ca + Kijiji, and company career-site jobs**. See
-[More pinned servers](#more-pinned-servers-canada-retail-real-estate-and-jobs). They connect
-the same way: swap in their name and URL in any of the steps below.
+Also in this repo: three single-purpose servers for **Instagram comments, Instagram reel
+transcripts and YouTube AI summaries** (see [Single-purpose servers](#single-purpose-servers-instagram-comments-reel-transcripts-youtube-summaries)),
+and four for **Canadian grocery prices, Canadian retail store stock, Realtor.ca + Kijiji, and
+company career-site jobs** (see [More pinned servers](#more-pinned-servers-canada-retail-real-estate-and-jobs)).
+They connect the same way: swap in their name and URL in any of the steps below.
 
 **Sign-in:** the first tool call opens an Apify sign-in page (OAuth). Runs bill to the account
 you sign in with. Never paste a token into one of these URLs.
@@ -227,6 +231,59 @@ Instagram:
 - Results can include public usernames and comment authors. Handle them under GDPR, PIPEDA
   or CCPA.
 
+## Single-purpose servers: Instagram comments, reel transcripts, YouTube summaries
+
+Same model as above: Apify hosts the MCP server, the URL pins it to one Actor, you sign in to your
+own Apify account (OAuth) and runs bill per result to that account. Public data only.
+
+| Server | Actor | Price (2026-10-08) |
+|---|---|---|
+| `yugenox-instagram-comments` | [Instagram Comments Scraper](https://apify.com/yugenox/instagram-comments-scraper): public comments on a post or reel, newest or top first, filtered by keywords, likes or date | $1.90 per 1,000 comments on the Free plan, less on paid plans |
+| `yugenox-reels-transcript` | [Instagram Reels Transcript](https://apify.com/yugenox/instagram-reels-transcript): the spoken words of public reels as text, with each reel's caption and stats | $1.90 per 1,000 reels on the Free plan, less on paid plans, plus $0.004 per started minute of audio |
+| `yugenox-youtube-summarizer` | [YouTube AI Video Summarizer](https://apify.com/yugenox/youtube-ai-video-summarizer): Gemini watches public videos and returns a timestamped brief, answers to your questions or fields you define, in 25 languages | $0.02 per started 10 minutes of video, $0.002 per answered question, plus $0.002 per run |
+
+The Actor pages are the source of truth for prices, and `fetch-actor-details` lets the agent read
+the price in force before it starts a run.
+
+### yugenox-instagram-comments
+
+```bash
+claude mcp add --transport http yugenox-instagram-comments "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-comments-scraper"
+```
+
+[Cursor](https://cursor.com/en/install-mcp?name=yugenox-instagram-comments&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9pbnN0YWdyYW0tY29tbWVudHMtc2NyYXBlciJ9) · [VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-instagram-comments&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Finstagram-comments-scraper%22%7D) · [VS Code Insiders](https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-instagram-comments&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Finstagram-comments-scraper%22%7D&quality=insiders)
+
+- "Every comment on these three reels that mentions "restock" or "sold out", newest first."
+- "The 200 most-liked comments on this post, grouped by what people are asking for."
+
+### yugenox-reels-transcript
+
+```bash
+claude mcp add --transport http yugenox-reels-transcript "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-reels-transcript"
+```
+
+[Cursor](https://cursor.com/en/install-mcp?name=yugenox-reels-transcript&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC9pbnN0YWdyYW0tcmVlbHMtdHJhbnNjcmlwdCJ9) · [VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-reels-transcript&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Finstagram-reels-transcript%22%7D) · [VS Code Insiders](https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-reels-transcript&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Finstagram-reels-transcript%22%7D&quality=insiders)
+
+- "Transcribe these 10 reels and give me the main claim of each in one line."
+- "Which of these reels mention a discount code, and what is the code?"
+
+### yugenox-youtube-summarizer
+
+```bash
+claude mcp add --transport http yugenox-youtube-summarizer "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/youtube-ai-video-summarizer"
+```
+
+[Cursor](https://cursor.com/en/install-mcp?name=yugenox-youtube-summarizer&config=eyJ1cmwiOiJodHRwczovL21jcC5hcGlmeS5jb20vP3Rvb2xzPWZldGNoLWFjdG9yLWRldGFpbHMseXVnZW5veC95b3V0dWJlLWFpLXZpZGVvLXN1bW1hcml6ZXIifQ%3D%3D) · [VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-youtube-summarizer&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fyoutube-ai-video-summarizer%22%7D) · [VS Code Insiders](https://insiders.vscode.dev/redirect/mcp/install?name=yugenox-youtube-summarizer&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.apify.com%2F%3Ftools%3Dfetch-actor-details%2Cyugenox%2Fyoutube-ai-video-summarizer%22%7D&quality=insiders)
+
+- "Summarize this 2-hour podcast with chapters and timestamp links."
+- "For these 5 product review videos, what are the top 3 complaints?"
+
+**Limits for these servers.** Instagram shows comment replies only to logged-in accounts, so the
+comments server returns top-level comments. Reel transcripts and video summaries are written by
+Google's Gemini and can contain mistakes: check anything important against the original. The summarizer
+reads public YouTube videos only. Comment and reel rows include public usernames: handle them
+under GDPR, PIPEDA or CCPA.
+
 ## More pinned servers: Canada retail, real estate and jobs
 
 Same model as above: Apify hosts the MCP server, the URL pins it to our Actors, you sign in to
@@ -317,6 +374,9 @@ under the `io.github.ArpitGandhi1934/` namespace:
 | `yugenox-social-data` | `yugenox-social` |
 | `yugenox-youtube-scraper` | `yugenox-youtube` |
 | `yugenox-instagram-scraper` | `yugenox-instagram` |
+| `yugenox-instagram-comments` | `yugenox-instagram-comments` |
+| `yugenox-instagram-reels-transcript` | `yugenox-reels-transcript` |
+| `yugenox-youtube-ai-summarizer` | `yugenox-youtube-summarizer` |
 | `yugenox-canada-grocery-prices` | `yugenox-canada-grocery` |
 | `yugenox-canada-retail-store-stock` | `yugenox-canada-store-stock` |
 | `yugenox-realtor-ca-real-estate` | `yugenox-realtor-ca` |

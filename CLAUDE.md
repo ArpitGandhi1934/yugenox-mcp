@@ -11,6 +11,9 @@ account with OAuth, runs bill to them, and every run pays yugenox per event (PPE
 - **Since v1.1.0 (staged 2026-10-06, growth backlog M1):** four vertical servers, 19 more actors: Canadian
   grocery, Canadian retail store stock, Realtor.ca + Kijiji, ATS jobs. Lists live in
   `scripts/servers.mjs` (header comment states the inclusion rule).
+- **Since v1.2.0 (2026-10-08, growth backlog M2):** three single-purpose servers for actors with paying demand:
+  instagram-comments-scraper (our #2 actor by customer runs), instagram-reels-transcript, youtube-ai-video-summarizer.
+  One registry entry each, so each gets its own directory page (mcprush, Glama… mirror the registry).
 - Public repo: https://github.com/ArpitGandhi1934/yugenox-mcp
 - Owner: Yugenox Corporation. Workstream WS3 of the IG + YT marketing plan
   (`~/projects/apify/marketing/ig-yt/`). Private drafts (Custom GPT, directory forms,
@@ -23,6 +26,9 @@ account with OAuth, runs bill to them, and every run pays yugenox per event (PPE
 | yugenox-instagram | `https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-scraper` |
 | yugenox-youtube | `https://mcp.apify.com/?tools=fetch-actor-details,yugenox/youtube-scraper` |
 | yugenox-social | `https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-scraper,yugenox/youtube-scraper` |
+| yugenox-instagram-comments | instagram-comments-scraper |
+| yugenox-reels-transcript | instagram-reels-transcript |
+| yugenox-youtube-summarizer | youtube-ai-video-summarizer |
 | yugenox-canada-grocery | loblaws-grocery-scraper, instacart-grocery-scraper, costco-scraper, flipp-flyer-deals-scraper (save-on-foods-scraper left out: UNBLOCKER-only) |
 | yugenox-canada-store-stock | canadian-tire-scraper, home-depot-canada-scraper, home-hardware-canada-scraper, princess-auto-scraper, bestbuy-canada-scraper, shoppers-drug-mart-scraper, lcbo-products-scraper, saq-scraper |
 | yugenox-realtor-ca | realtor-ca-property-scraper, realtor-ca-agent-scraper, kijiji-scraper |
@@ -31,6 +37,7 @@ account with OAuth, runs bill to them, and every run pays yugenox per event (PPE
 Vertical rows list the Apify actor names (each is `yugenox/<name>`); the full URLs are `https://mcp.apify.com/?tools=fetch-actor-details,`
 + those names, generated into `install-links.json`. Verified 2026-10-06 with `check-tools.mjs`
 (apify-mcp-server 0.17.2): all 7 pinned URLs list every pinned tool; `check-actors.mjs` passed 21/21.
+Re-verified 2026-10-08 (apify-mcp-server 0.17.3): all 10 URLs list every pinned tool; `check-actors.mjs` 24/24.
 
 Verified 2026-09-26 with `node scripts/check-tools.mjs` (apify-mcp-server 0.16.0). tools/list returns
 `yugenox--instagram-scraper` / `yugenox--youtube-scraper` plus the helpers Apify always adds:
@@ -53,7 +60,7 @@ No build step. Plain JSON + Markdown, plus small Node (>=20) scripts with zero d
   Agent Plugin (agent-plugins.org 1.0): `plugin.json` + `mcp.json` (type `streamable-http`), validated
   against the published schemas. Keep `.mcp.json` and `mcp.json` pointing at the same URL.
 - `glama.json` — Glama ownership claim (maintainer ArpitGandhi1934).
-- `registry/{instagram,youtube,social,canada-grocery,canada-stock,canada-real-estate,ats-jobs}/server.json` — MCP Registry entries, namespace
+- `registry/{instagram,youtube,social,instagram-comments,instagram-reels-transcript,youtube-summarizer,canada-grocery,canada-stock,canada-real-estate,ats-jobs}/server.json` — MCP Registry entries, namespace
   `io.github.ArpitGandhi1934/*` (must match the GitHub owner for OIDC). Descriptions ≤100 chars.
 - `.github/workflows/publish-mcp-registry.yml` — on tag `v*`: stamps the tag version into
   every `registry/*/server.json` (glob since v1.1.0), `mcp-publisher login github-oidc`, publishes them all.
@@ -87,24 +94,26 @@ If OIDC ever fails: `mcp-publisher login github` (device code, Arpit's browser) 
 
 ## Registry entries (live)
 
-Published 2026-09-26 13:07 UTC by Actions run 36244107188 (tag v1.0.0), OIDC login, status `active`:
+History: v1.0.0 published 2026-09-26 13:07 UTC (Actions run 36244107188: instagram, youtube, social).
+v1.1.0 published 2026-10-06 04:32 UTC (all 7: the 3 above + the 4 verticals). Every tag republishes every
+entry at the tag's version. Entry URL pattern:
+`https://registry.modelcontextprotocol.io/v0/servers/io.github.ArpitGandhi1934%2F<name>/versions/latest`.
 
-| Name | Version | Entry |
+| Name | Latest | Folder |
 |---|---|---|
-| io.github.ArpitGandhi1934/yugenox-instagram-scraper | 1.0.0 | https://registry.modelcontextprotocol.io/v0/servers/io.github.ArpitGandhi1934%2Fyugenox-instagram-scraper/versions/latest |
-| io.github.ArpitGandhi1934/yugenox-youtube-scraper | 1.0.0 | https://registry.modelcontextprotocol.io/v0/servers/io.github.ArpitGandhi1934%2Fyugenox-youtube-scraper/versions/latest |
-| io.github.ArpitGandhi1934/yugenox-social-data | 1.0.0 | https://registry.modelcontextprotocol.io/v0/servers/io.github.ArpitGandhi1934%2Fyugenox-social-data/versions/latest |
+| io.github.ArpitGandhi1934/yugenox-instagram-scraper | 1.1.0 | registry/instagram |
+| io.github.ArpitGandhi1934/yugenox-youtube-scraper | 1.1.0 | registry/youtube |
+| io.github.ArpitGandhi1934/yugenox-social-data | 1.1.0 | registry/social |
+| io.github.ArpitGandhi1934/yugenox-canada-grocery-prices | 1.1.0 | registry/canada-grocery |
+| io.github.ArpitGandhi1934/yugenox-canada-retail-store-stock | 1.1.0 | registry/canada-stock |
+| io.github.ArpitGandhi1934/yugenox-realtor-ca-real-estate | 1.1.0 | registry/canada-real-estate |
+| io.github.ArpitGandhi1934/yugenox-ats-jobs-salaries | 1.1.0 | registry/ats-jobs |
+| io.github.ArpitGandhi1934/yugenox-instagram-comments | v1.2.0 pending | registry/instagram-comments |
+| io.github.ArpitGandhi1934/yugenox-instagram-reels-transcript | v1.2.0 pending | registry/instagram-reels-transcript |
+| io.github.ArpitGandhi1934/yugenox-youtube-ai-summarizer | v1.2.0 pending | registry/youtube-summarizer |
 
-**Staged for v1.1.0, NOT published yet** (committed locally 2026-10-06; steps in
-`~/projects/apify/marketing/growth/drafts/mcp-publish-steps.md`). Move these rows up into the live table,
-with the Actions run id, once `search=yugenox` lists 7 names:
-
-| Name | Version | Folder |
-|---|---|---|
-| io.github.ArpitGandhi1934/yugenox-canada-grocery-prices | 1.1.0 (pending) | registry/canada-grocery |
-| io.github.ArpitGandhi1934/yugenox-canada-retail-store-stock | 1.1.0 (pending) | registry/canada-stock |
-| io.github.ArpitGandhi1934/yugenox-realtor-ca-real-estate | 1.1.0 (pending) | registry/canada-real-estate |
-| io.github.ArpitGandhi1934/yugenox-ats-jobs-salaries | 1.1.0 (pending) | registry/ats-jobs |
+Third-party directories mirror the registry on their own: mcprush.com listed all 7 v1.1.0 entries by
+2026-10-07 and emailed Arpit to claim them (claiming = his account).
 
 Search: https://registry.modelcontextprotocol.io/v0/servers?search=yugenox (registry search matches the
 server name only, which is why every name contains "yugenox"). Downstream directories that mirror the

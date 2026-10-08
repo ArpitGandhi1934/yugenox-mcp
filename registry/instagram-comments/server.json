@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ArpitGandhi1934/yugenox-instagram-comments",
+  "title": "Instagram Comments Scraper: All Comments, No Login",
+  "description": "Public comments on any Instagram post or reel, newest or top first, with keyword filters. No login.",
+  "repository": {
+    "url": "https://github.com/ArpitGandhi1934/yugenox-mcp",
+    "source": "github"
+  },
+  "version": "1.1.0",
+  "websiteUrl": "https://apify.com/yugenox/instagram-comments-scraper",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=fetch-actor-details,yugenox/instagram-comments-scraper",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. Clients with OAuth sign in to Apify instead. Otherwise your own Apify token as Bearer <token>.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
