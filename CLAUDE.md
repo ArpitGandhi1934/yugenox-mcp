@@ -95,22 +95,24 @@ If OIDC ever fails: `mcp-publisher login github` (device code, Arpit's browser) 
 ## Registry entries (live)
 
 History: v1.0.0 published 2026-09-26 13:07 UTC (Actions run 36244107188: instagram, youtube, social).
-v1.1.0 published 2026-10-06 04:32 UTC (all 7: the 3 above + the 4 verticals). Every tag republishes every
+v1.1.0 published 2026-10-06 04:32 UTC (all 7: the 3 above + the 4 verticals). v1.2.0 published 2026-10-08 04:13 UTC
+(Actions run 37726467194: all 10, adding instagram-comments, instagram-reels-transcript, youtube-ai-summarizer).
+The search endpoint can show a stale `isLatest`; the per-name `/versions/latest` URL is authoritative. Every tag republishes every
 entry at the tag's version. Entry URL pattern:
 `https://registry.modelcontextprotocol.io/v0/servers/io.github.ArpitGandhi1934%2F<name>/versions/latest`.
 
 | Name | Latest | Folder |
 |---|---|---|
-| io.github.ArpitGandhi1934/yugenox-instagram-scraper | 1.1.0 | registry/instagram |
-| io.github.ArpitGandhi1934/yugenox-youtube-scraper | 1.1.0 | registry/youtube |
-| io.github.ArpitGandhi1934/yugenox-social-data | 1.1.0 | registry/social |
-| io.github.ArpitGandhi1934/yugenox-canada-grocery-prices | 1.1.0 | registry/canada-grocery |
-| io.github.ArpitGandhi1934/yugenox-canada-retail-store-stock | 1.1.0 | registry/canada-stock |
-| io.github.ArpitGandhi1934/yugenox-realtor-ca-real-estate | 1.1.0 | registry/canada-real-estate |
-| io.github.ArpitGandhi1934/yugenox-ats-jobs-salaries | 1.1.0 | registry/ats-jobs |
-| io.github.ArpitGandhi1934/yugenox-instagram-comments | v1.2.0 pending | registry/instagram-comments |
-| io.github.ArpitGandhi1934/yugenox-instagram-reels-transcript | v1.2.0 pending | registry/instagram-reels-transcript |
-| io.github.ArpitGandhi1934/yugenox-youtube-ai-summarizer | v1.2.0 pending | registry/youtube-summarizer |
+| io.github.ArpitGandhi1934/yugenox-instagram-scraper | 1.2.0 | registry/instagram |
+| io.github.ArpitGandhi1934/yugenox-youtube-scraper | 1.2.0 | registry/youtube |
+| io.github.ArpitGandhi1934/yugenox-social-data | 1.2.0 | registry/social |
+| io.github.ArpitGandhi1934/yugenox-canada-grocery-prices | 1.2.0 | registry/canada-grocery |
+| io.github.ArpitGandhi1934/yugenox-canada-retail-store-stock | 1.2.0 | registry/canada-stock |
+| io.github.ArpitGandhi1934/yugenox-realtor-ca-real-estate | 1.2.0 | registry/canada-real-estate |
+| io.github.ArpitGandhi1934/yugenox-ats-jobs-salaries | 1.2.0 | registry/ats-jobs |
+| io.github.ArpitGandhi1934/yugenox-instagram-comments | 1.2.0 | registry/instagram-comments |
+| io.github.ArpitGandhi1934/yugenox-instagram-reels-transcript | 1.2.0 | registry/instagram-reels-transcript |
+| io.github.ArpitGandhi1934/yugenox-youtube-ai-summarizer | 1.2.0 | registry/youtube-summarizer |
 
 Third-party directories mirror the registry on their own: mcprush.com listed all 7 v1.1.0 entries by
 2026-10-07 and emailed Arpit to claim them (claiming = his account).
